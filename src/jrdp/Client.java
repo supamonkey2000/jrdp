@@ -35,6 +35,7 @@ public class Client extends JFrame {
 			sInput  = new ObjectInputStream(socket.getInputStream());
 			sOutput = new ObjectOutputStream(socket.getOutputStream());
 			sOutput.writeObject(password);
+			sOutput.writeDouble(compression);
 			sOutput.flush();
 			System.out.println("Info: Client connected to server");
 		}catch(Exception ex) {ex.printStackTrace();}
