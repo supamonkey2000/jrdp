@@ -62,7 +62,7 @@ public class Client extends JFrame {
 		}catch(Exception ex) {ex.printStackTrace();}
 		System.out.println("Info: Starting Listener thread");
 		new ListenFromServer(socket,sInput,sOutput).start();
-		
+		new SendInput(socket, sInput, sOutput).start();
 	}
 	
 	public void revailidateFrame() {

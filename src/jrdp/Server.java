@@ -87,7 +87,7 @@ public class Server {
 			System.out.println("Info: Starting Input loop");
 			while(true) {
 				try {
-					String input = sInput.readUTF();
+					String input = (String)sInput.readObject();
 					//data format (separated by ":") (keystrokes are separated by "~")
 					//{winStartX, winStartY, winEndX, winEndY, key, mouseXincrement, mouseYincrement, scrollIncrement}
 					String[] data = input.split(":");
