@@ -3,6 +3,9 @@ package jrdp;
 import java.net.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
+
+import javax.imageio.ImageIO;
+import javax.imageio.stream.ImageOutputStream;
 import javax.swing.*;
 
 public class Client extends JFrame {
@@ -60,9 +63,8 @@ public class Client extends JFrame {
 				try {
 					byte[] toConvertBytes = (byte[])sInput.readObject();
 					BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
-					label = new JLabel(new ImageIcon(screenshot));
+					label.setIcon(new ImageIcon(screenshot));
 					revailidateFrame();
-					System.out.println("Info: Updated Image Label");
 				}catch(Exception ex) {ex.printStackTrace();}
 			}
 		}
