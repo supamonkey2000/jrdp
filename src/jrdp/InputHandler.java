@@ -20,6 +20,7 @@ public class InputHandler {
 						Thread.sleep(200);//Might need to change this value
 					}catch(Exception ex) {};
 					robot.keyRelease(key);
+					System.out.println("Info: A key was pressed!");
 				}
 				
 				if(mClick!=-1) {
@@ -28,6 +29,7 @@ public class InputHandler {
 						Thread.sleep(50);//Might need to change this value
 					}catch(Exception ex) {};
 					robot.mouseRelease(mClick);
+					System.out.println("Info: A mouse was clicked!");
 				}
 			}
 		};
