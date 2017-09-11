@@ -1,17 +1,20 @@
 package jrdp;
 
 import java.net.*;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.*;
-
-import javax.imageio.ImageIO;
-import javax.imageio.stream.ImageOutputStream;
 import javax.swing.*;
 
 public class Client extends JFrame {
+	/**
+	 * @author Joshua C Moore
+	 */private static final long serialVersionUID = 1L;
+	
 	private String address,password;
 	private int port;
 	private double compression;
+	public int height,width;
 	
 	private Socket socket;
 	private ObjectInputStream sInput;
@@ -30,6 +33,8 @@ public class Client extends JFrame {
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setUndecorated(true);
 		setVisible(true);
+		height = getHeight();
+		width = getWidth();
 	}
 	
 	public void connect() {
@@ -40,8 +45,9 @@ public class Client extends JFrame {
 			sOutput.writeObject(password);
 			sOutput.writeDouble(compression);
 			sOutput.flush();
-			System.out.println("Info: Client connected to server");
+			System.out.println("Info: Client connected to server at "+socket.getRemoteSocketAddress()+":"+socket.getPort());
 		}catch(Exception ex) {ex.printStackTrace();}
+		System.out.println("Info: Starting Listener thread");
 		new ListenFromServer(socket,sInput,sOutput).start();
 	}
 	
@@ -63,7 +69,8 @@ public class Client extends JFrame {
 				try {
 					byte[] toConvertBytes = (byte[])sInput.readObject();
 					BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
-					label.setIcon(new ImageIcon(screenshot));
+					Image newImage = new ImageIcon(screenshot).getImage().getScaledInstance(width, height, java.awt.Image.SCALE_FAST);
+					label.setIcon(new ImageIcon(newImage));
 					revailidateFrame();
 				}catch(Exception ex) {ex.printStackTrace();}
 			}

@@ -10,6 +10,9 @@ import java.util.concurrent.ThreadLocalRandom;
 import javax.swing.*;
 
 public class JRDP extends JFrame {
+	/**
+	 * @author Joshua C Moore
+	 */private static final long serialVersionUID = 1L;
 	
 	private JTextField hostPasswordTF,hostPortTF,clientAddressTF,clientPortTF,clientPasswordTF,clientCompressionTF;
 	private JLabel hostPasswordLBL,hostPortLBL,clientAddressLBL,clientPortLBL,clientPasswordLBL,clientCompressionLBL;
