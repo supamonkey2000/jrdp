@@ -48,7 +48,7 @@ public class Server {
 				if(!testPassword.equals(password)) {
 					socket.close();
 				}
-				System.out.println("Info: Connection accepted at "+socket.getRemoteSocketAddress().toString()+":"+socket.getLocalPort());
+				System.out.println("Info: Connection accepted at "+socket.getRemoteSocketAddress());
 				double tmpCompression = (double) sInput.readDouble();
 				if(tmpCompression > 0.00 && tmpCompression <=1.00) {
 					compression = tmpCompression;
@@ -86,11 +86,12 @@ public class Server {
 					windowStartY = Integer.parseInt(data[1]);
 					windowEndX = Integer.parseInt(data[2]);
 					windowEndY = Integer.parseInt(data[3]);
-					String[] keyStrokes = data[4].split("~");
+					String keyStrokes = data[4];//String[] and .split("~");
 					int mXi = Integer.parseInt(data[5]);
 					int mYi = Integer.parseInt(data[6]);
 					int mSi = Integer.parseInt(data[7]);
-					inh.handle(keyStrokes,mXi,mYi,mSi);
+					int mClick = Integer.parseInt(data[8]);
+					inh.handle(keyStrokes,mXi,mYi,mSi,mClick);
 				}catch(Exception ex) {}
 			}
 		}

@@ -2,6 +2,12 @@ package jrdp;
 
 import java.net.*;
 import java.awt.Image;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import javax.swing.*;
@@ -45,10 +51,11 @@ public class Client extends JFrame {
 			sOutput.writeObject(password);
 			sOutput.writeDouble(compression);
 			sOutput.flush();
-			System.out.println("Info: Client connected to server at "+socket.getRemoteSocketAddress()+":"+socket.getPort());
+			System.out.println("Info: Client connected to server at "+socket.getRemoteSocketAddress());
 		}catch(Exception ex) {ex.printStackTrace();}
 		System.out.println("Info: Starting Listener thread");
 		new ListenFromServer(socket,sInput,sOutput).start();
+		
 	}
 	
 	public void revailidateFrame() {
@@ -74,6 +81,72 @@ public class Client extends JFrame {
 					revailidateFrame();
 				}catch(Exception ex) {ex.printStackTrace();}
 			}
+		}
+	}
+	
+	class SendInput extends Thread {
+		Robot robot;
+		Socket socket;
+		ObjectInputStream sInput;
+		ObjectOutputStream sOutput;
+		
+		SendInput(Socket thesocket,ObjectInputStream thesInput,ObjectOutputStream thesOutput){
+			socket = thesocket;sInput = thesInput;sOutput = thesOutput;try{robot = new Robot();}catch(Exception e){}
+		}
+		
+		public void run() {
+			//data format (separated by ":") (keystrokes are separated by "~")
+			//{winStartX, winStartY, winEndX, winEndY, key, mouseXincrement, mouseYincrement, scrollIncrement}
+			addKeyListener(new KeyListener() {
+				@Override
+				public void keyTyped(KeyEvent e){}@Override public void keyReleased(KeyEvent e){}
+				@Override
+				public void keyPressed(KeyEvent e) { /////// PRESSED KEY
+					try {
+						String send = "-1:-1:-1:-1:"+e.getKeyCode()+":0:0:0:-1";
+						sOutput.writeObject(send);
+						sOutput.flush();
+					}catch(Exception ex) {}
+				}
+			});
+			addMouseListener(new MouseListener() {
+							
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					try {
+						int button = e.getButton();
+						String send = "-1:-1:-1:-1:-1:0:0:0:"+button;
+						sOutput.writeObject(send);
+						sOutput.flush();
+					}catch(Exception ex) {}
+				}
+
+				@Override
+				public void mouseEntered(MouseEvent e) {}
+
+				@Override
+				public void mouseExited(MouseEvent e) {}
+
+				@Override
+				public void mousePressed(MouseEvent e) {}
+
+				@Override
+				public void mouseReleased(MouseEvent e) {}
+			});
+			addMouseMotionListener(new MouseMotionListener() {
+				
+				@Override
+				public void mouseMoved(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mouseDragged(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+			});
 		}
 	}
 }
