@@ -30,6 +30,7 @@ public class ImageHandler {
 	public BufferedImage getScreenshot(int x, int y, int width, int height) {
 		BufferedImage fromRobot = getFromRobot(x,y,width,height);
 		BufferedImage compressed = compress(fromRobot);
+		System.out.println("Info: ImageHandler: Returning compressed Image!");
 		return compressed;
 	}
 	

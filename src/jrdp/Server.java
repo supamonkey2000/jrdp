@@ -18,10 +18,13 @@ public class Server {
 	
 	public void start() {
 		try {
+			System.out.println("Info: Starting server");
 			serverSocket = new ServerSocket(port);
 			Socket socket = serverSocket.accept();
 			ClientThread cl = new ClientThread(socket);
+			System.out.println("Info: Running ClientThread.start()");
 			cl.start();
+			System.out.println("Info: Started without errors (hopefully)");
 		}catch(IOException ex) {ex.printStackTrace();}
 	}
 	
@@ -45,6 +48,7 @@ public class Server {
 				if(!testPassword.equals(password)) {
 					socket.close();
 				}
+				System.out.println("Info: Connection accepted!");
 				double tmpCompression = (double) sInput.readDouble();
 				if(tmpCompression > 0.00 && tmpCompression <=1.00) {
 					compression = tmpCompression;
@@ -69,6 +73,7 @@ public class Server {
 				}
 			};
 			imageThread.start();
+			System.out.println("Info: ImageThread started");
 			InputHandler inh = new InputHandler();
 			while(true) {
 				try {
