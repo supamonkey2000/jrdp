@@ -20,7 +20,8 @@ public class Client extends JFrame {
 	private String address,password;
 	private int port;
 	private double compression;
-	public int height,width;
+	public int height,width,serverHeight,serverWidth;
+	public double scaleRatio;
 	
 	private Socket socket;
 	private ObjectInputStream sInput;
@@ -51,6 +52,12 @@ public class Client extends JFrame {
 			sOutput.writeObject(password);
 			sOutput.writeDouble(compression);
 			sOutput.flush();
+			String serverXY = (String)sInput.readObject();
+			String[] serverXYarray = serverXY.split("x");
+			serverWidth=Integer.parseInt(serverXYarray[0]);
+			serverHeight=Integer.parseInt(serverXYarray[1]);
+			scaleRatio=((serverWidth / width) + (serverHeight / height) / 2);
+			
 			System.out.println("Info: Client connected to server at "+socket.getRemoteSocketAddress());
 		}catch(Exception ex) {ex.printStackTrace();}
 		System.out.println("Info: Starting Listener thread");
@@ -110,7 +117,6 @@ public class Client extends JFrame {
 				}
 			});
 			addMouseListener(new MouseListener() {
-							
 				@Override
 				public void mouseClicked(MouseEvent e) {
 					try {
@@ -133,18 +139,31 @@ public class Client extends JFrame {
 				@Override
 				public void mouseReleased(MouseEvent e) {}
 			});
+			
 			addMouseMotionListener(new MouseMotionListener() {
-				
 				@Override
 				public void mouseMoved(MouseEvent e) {
-					// TODO Auto-generated method stub
-					
+					int localX = e.getX();
+					int localY = e.getY();
+					int sendX = (int)(localX * scaleRatio);
+					int sendY = (int)(localY * scaleRatio);
+					String send = "-1:-1:-1:-1:-1:"+sendX+":"+sendY+":0:-1";
+					try {
+						sOutput.writeObject(send);
+						sOutput.flush();
+					}catch(Exception ex) {}
 				}
-				
 				@Override
 				public void mouseDragged(MouseEvent e) {
-					// TODO Auto-generated method stub
-					
+					int localX = e.getX();
+					int localY = e.getY();
+					int sendX = (int)(localX * scaleRatio);
+					int sendY = (int)(localY * scaleRatio);
+					String send = "-1:-1:-1:-1:-1:"+sendX+":"+sendY+":0:"+e.getButton();
+					try {
+						sOutput.writeObject(send);
+						sOutput.flush();
+					}catch(Exception ex) {}
 				}
 			});
 		}

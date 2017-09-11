@@ -1,4 +1,6 @@
 package jrdp;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -57,6 +59,13 @@ public class Server {
 		}
 		
 		public void run() {
+			GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+			int serverWidth = gd.getDisplayMode().getWidth();
+			int serverHeight = gd.getDisplayMode().getHeight();
+			try {
+				sOutput.writeObject(serverWidth+"x"+serverHeight);
+				sOutput.flush();
+			}catch(Exception ex){}
 			System.out.println("Info: Running imageThread");
 			Thread imageThread = new Thread() {
 				public void run() {

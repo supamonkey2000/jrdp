@@ -1,7 +1,5 @@
 package jrdp;
 
-import java.awt.MouseInfo;
-import java.awt.Point;
 import java.awt.Robot;
 
 public class InputHandler {
@@ -34,16 +32,10 @@ public class InputHandler {
 			}
 		};
 		pressThread.start();
-		if(mXi!=0) {
-			Point ploc = MouseInfo.getPointerInfo().getLocation();getClass();
-			int x = ((int)ploc.getX()) + (mXi);
-			int y = ((int)ploc.getY());
-			robot.mouseMove(x, y);
-		}
-		if(mXi!=0) {
-			Point ploc = MouseInfo.getPointerInfo().getLocation();getClass();
-			int x = ((int)ploc.getX());
-			int y = ((int)ploc.getY()) + (mYi);
+		if(mXi!=0 || mYi!=0) {
+			//Point ploc = MouseInfo.getPointerInfo().getLocation();getClass();
+			int x = mXi;
+			int y = mYi;
 			robot.mouseMove(x, y);
 		}
 		if(mSi!=0) {
