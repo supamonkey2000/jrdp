@@ -53,6 +53,7 @@ public class Server {
 		}
 		
 		public void run() {
+			System.out.println("Info: Running imageThread");
 			Thread imageThread = new Thread() {
 				public void run() {
 					ImageHandler ih = new ImageHandler(compression,socket);

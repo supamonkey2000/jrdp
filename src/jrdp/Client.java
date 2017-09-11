@@ -35,8 +35,13 @@ public class Client extends JFrame {
 			sInput  = new ObjectInputStream(socket.getInputStream());
 			sOutput = new ObjectOutputStream(socket.getOutputStream());
 			sOutput.writeObject(password);
+			System.out.println("Info: Client connected to server");
 		}catch(Exception ex) {ex.printStackTrace();}
 		new ListenFromServer(socket,sInput,sOutput).start();
+	}
+	
+	public void revailidateFrame() {
+		revalidate();
 	}
 	
 	class ListenFromServer extends Thread {
@@ -53,6 +58,8 @@ public class Client extends JFrame {
 				try {
 					BufferedImage screenshot = (BufferedImage) sInput.readObject();
 					label = new JLabel(new ImageIcon(screenshot));
+					revailidateFrame();
+					System.out.println("Info: Updated Image Label");
 				}catch(Exception ex) {ex.printStackTrace();}
 			}
 		}
