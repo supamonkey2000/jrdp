@@ -58,7 +58,8 @@ public class Client extends JFrame {
 		public void run() {
 			while(true) {
 				try {
-					BufferedImage screenshot = (BufferedImage) sInput.readObject();
+					byte[] toConvertBytes = (byte[])sInput.readObject();
+					BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
 					label = new JLabel(new ImageIcon(screenshot));
 					revailidateFrame();
 					System.out.println("Info: Updated Image Label");
