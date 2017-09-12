@@ -20,7 +20,7 @@ public class Client extends JFrame {
 	private String address,password;
 	private int port;
 	private double compression;
-	public int height,width,serverHeight,serverWidth;
+	public double height,width,serverHeight,serverWidth;
 	public double scaleRatio;
 	
 	private Socket socket;
@@ -56,9 +56,9 @@ public class Client extends JFrame {
 			String[] serverXYarray = serverXY.split("x");
 			serverWidth=Integer.parseInt(serverXYarray[0]);
 			serverHeight=Integer.parseInt(serverXYarray[1]);
-			scaleRatio=((serverWidth / width) + (serverHeight / height) / 2);
+			scaleRatio=(((serverWidth / width) + (serverHeight / height)) / 2);
 			
-			System.out.println("Info: Client connected to server at "+socket.getRemoteSocketAddress());
+			System.out.println("Info: Client connected to server at "+socket.getRemoteSocketAddress()+" with screen size "+serverWidth+"x"+serverHeight);
 		}catch(Exception ex) {ex.printStackTrace();}
 		System.out.println("Info: Starting Listener thread");
 		new ListenFromServer(socket,sInput,sOutput).start();
@@ -83,7 +83,7 @@ public class Client extends JFrame {
 				try {
 					byte[] toConvertBytes = (byte[])sInput.readObject();
 					BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
-					Image newImage = new ImageIcon(screenshot).getImage().getScaledInstance(width, height, java.awt.Image.SCALE_FAST);
+					Image newImage = new ImageIcon(screenshot).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH);
 					label.setIcon(new ImageIcon(newImage));
 					revailidateFrame();
 				}catch(Exception ex) {ex.printStackTrace();}
@@ -149,7 +149,6 @@ public class Client extends JFrame {
 					int localY = e.getY();
 					int sendX = (int)(localX * scaleRatio);
 					int sendY = (int)(localY * scaleRatio);
-					System.out.println("DEBUG: Mouse comparison: "+localX + " and " + sendX + " and " + scaleRatio);
 					String send = "-1:-1:-1:-1:-1:"+sendX+":"+sendY+":0:-1";
 					try {
 						sOutput.writeObject(send);
