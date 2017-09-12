@@ -25,30 +25,10 @@ public class InputHandler {
 				}
 				
 				if(mClick!=-1) {
-					switch(mClick) {
-					case 1:
-						robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-						try{
-							Thread.sleep(50);//Might need to change this value
-						}catch(Exception ex) {};
-						robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-						break;
-					case 2:
-						robot.mousePress(InputEvent.BUTTON2_DOWN_MASK);
-						try{
-							Thread.sleep(50);//Might need to change this value
-						}catch(Exception ex) {};
-						robot.mouseRelease(InputEvent.BUTTON2_DOWN_MASK);
-						break;
-					case 3:
-						robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
-						try{
-							Thread.sleep(50);//Might need to change this value
-						}catch(Exception ex) {};
-						robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
-						break;
-					}
-					System.out.println("Info: A mouse was clicked!");
+					robot.mousePress(InputEvent.getMaskForButton(mClick));
+					robot.delay(50);
+					robot.mouseRelease(InputEvent.getMaskForButton(mClick));
+					System.out.println("Info: Mouse button "+InputEvent.getMaskForButton(mClick)+" was clicked");
 				}
 			}
 		};
