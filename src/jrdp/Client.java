@@ -149,6 +149,7 @@ public class Client extends JFrame {
 					int localY = e.getY();
 					int sendX = (int)(localX * scaleRatio);
 					int sendY = (int)(localY * scaleRatio);
+					System.out.println("DEBUG: Mouse comparison: "+localX + " and " + sendX + " and " + scaleRatio);
 					String send = "-1:-1:-1:-1:-1:"+sendX+":"+sendY+":0:-1";
 					try {
 						sOutput.writeObject(send);

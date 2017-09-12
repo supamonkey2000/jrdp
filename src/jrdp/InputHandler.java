@@ -38,7 +38,6 @@ public class InputHandler {
 			int x = mXi;
 			int y = mYi;
 			robot.mouseMove(x, y);
-			System.out.println("Info: Mouse moved to "+x+","+y);
 		}
 		if(mSi!=0) {
 			robot.mouseWheel(mSi);
