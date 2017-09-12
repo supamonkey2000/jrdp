@@ -121,7 +121,8 @@ public class Client extends JFrame {
 				@Override
 				public void mouseClicked(MouseEvent e) {
 					try {
-						int button = e.getButton();
+						@SuppressWarnings("static-access")
+						int button = e.getMaskForButton(e.getButton());
 						String send = "-1:-1:-1:-1:-1:0:0:0:"+button;
 						sOutput.writeObject(send);
 						sOutput.flush();

@@ -52,9 +52,11 @@ public class Server {
 				}
 				System.out.println("Info: Connection accepted at "+socket.getRemoteSocketAddress());
 				double tmpCompression = (double) sInput.readDouble();
+				System.out.println("Info: Compression from client = " + tmpCompression);
 				if(tmpCompression > 0.00 && tmpCompression <=1.00) {
 					compression = tmpCompression;
 				}
+				System.out.println("Info: Using " + compression + " for compression");
 			}catch(Exception e) {e.printStackTrace();}
 		}
 		
