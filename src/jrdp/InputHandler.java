@@ -1,6 +1,7 @@
 package jrdp;
 
 import java.awt.Robot;
+import java.awt.event.MouseEvent;
 
 public class InputHandler {
 	
@@ -24,7 +25,7 @@ public class InputHandler {
 				}
 				
 				if(mClick!=-1) {
-					robot.mousePress(mClick);
+					robot.mousePress(MouseEvent.getMaskForButton(mClick));
 					try{
 						Thread.sleep(50);//Might need to change this value
 					}catch(Exception ex) {};

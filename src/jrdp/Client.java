@@ -125,6 +125,7 @@ public class Client extends JFrame {
 						String send = "-1:-1:-1:-1:-1:0:0:0:"+button;
 						sOutput.writeObject(send);
 						sOutput.flush();
+						System.out.println("Info: Sent a mouse click!");
 					}catch(Exception ex) {}
 				}
 
