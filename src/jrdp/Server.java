@@ -78,6 +78,8 @@ public class Server {
 						BufferedImage screenshot = ih.getScreenshot(-1,-1,-1,-1);
 						//eventually the client will decide what the parameters are for zooming and stuff. for now just use -1-1-1-1
 						try{
+							String time = mi + " SENT@: " + new Date().getTime();
+							sOutput.writeUTF(time);
 							sOutput.writeObject(new NetworkHandler().imageToBytes(screenshot)); //originally writeObject(screenshot);
 							sOutput.flush();
 						}catch(Exception ex) {}
