@@ -80,6 +80,7 @@ public class Client extends JFrame {
 		}
 		
 		public void run() {
+			int mi = 0;
 			while(true) {
 				try {
 					byte[] toConvertBytes = (byte[])sInput.readObject();
@@ -87,7 +88,7 @@ public class Client extends JFrame {
 					BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
 					Image newImage = new ImageIcon(screenshot).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH);
 					label.setIcon(new ImageIcon(newImage));
-					System.out.println("SET: " + (new Date().getTime()));
+					System.out.println(mi + " GETT@: " + (new Date().getTime()));
 					//revailidateFrame();
 					//ImageIcon aimage = new ImageIcon(newImage);
 					//add(aimage);// may fail
