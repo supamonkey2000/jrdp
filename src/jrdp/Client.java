@@ -83,16 +83,19 @@ public class Client extends JFrame {
 			int mi = 0;
 			while(true) {
 				try {
+					String time = sInput.readUTF();
+					System.out.println(time);
+					System.out.println(mi + " GETT@: " + (new Date().getTime()));
 					byte[] toConvertBytes = (byte[])sInput.readObject();
-					System.out.println("RECIEVED: " + (new Date().getTime()));
 					BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
 					Image newImage = new ImageIcon(screenshot).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH);
 					label.setIcon(new ImageIcon(newImage));
 					System.out.println(mi + " GETT@: " + (new Date().getTime()));
+					mi++;
 					//revailidateFrame();
 					//ImageIcon aimage = new ImageIcon(newImage);
 					//add(aimage);// may fail
-				}catch(Exception ex) {ex.printStackTrace();}
+				}catch(Exception ex) {/*nothing*/}
 			}
 		}
 	}
