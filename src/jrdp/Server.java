@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.*;
+import java.util.Date;
 
 public class Server {
 	private int port;
@@ -73,13 +74,14 @@ public class Server {
 				public void run() {
 					ImageHandler ih = new ImageHandler(compression,socket);
 					while(true) {
+						System.out.println("START: " + new Date().getTime());
 						BufferedImage screenshot = ih.getScreenshot(-1,-1,-1,-1);
 						//eventually the client will decide what the parameters are for zooming and stuff. for now just use -1-1-1-1
 						try{
 							sOutput.writeObject(new NetworkHandler().imageToBytes(screenshot)); //originally writeObject(screenshot);
 							sOutput.flush();
 						}catch(Exception ex) {}
-						
+						System.out.println("THEND: " + new Date().getTime());
 					}
 				}
 			};

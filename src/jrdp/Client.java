@@ -1,6 +1,7 @@
 package jrdp;
 
 import java.net.*;
+import java.util.Date;
 import java.awt.Image;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -82,10 +83,14 @@ public class Client extends JFrame {
 			while(true) {
 				try {
 					byte[] toConvertBytes = (byte[])sInput.readObject();
+					System.out.println("RECIEVED: " + (new Date().getTime()));
 					BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
 					Image newImage = new ImageIcon(screenshot).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH);
 					label.setIcon(new ImageIcon(newImage));
-					revailidateFrame();
+					System.out.println("SET: " + (new Date().getTime()));
+					//revailidateFrame();
+					//ImageIcon aimage = new ImageIcon(newImage);
+					//add(aimage);// may fail
 				}catch(Exception ex) {ex.printStackTrace();}
 			}
 		}
