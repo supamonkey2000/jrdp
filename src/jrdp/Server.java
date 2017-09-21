@@ -78,11 +78,12 @@ public class Server {
 						try{
 							long time1 = new Date().getTime();
 							sOutput.writeObject(new NetworkHandler().imageToBytes(new ImageHandler(compression,socket).getScreenshot(-1,-1,-1,-1))); //originally writeObject(screenshot);
-							sOutput.flush();
-							String meh = sInput.readUTF();
 							long time2 = new Date().getTime();
 							long dif = time2 - time1;
 							System.out.println("Time 1: " + time1 + "\nTime 2: "+time2+"\nDiff: "+dif);
+							sOutput.flush();
+							String meh = sInput.readUTF();
+							
 						}catch(Exception ex) {System.out.println("WARN: Socket has been closed by Client!");/*break;*/}
 					}
 				}

@@ -30,7 +30,8 @@ public class ImageHandler {
 	public BufferedImage getScreenshot(int x, int y, int width, int height) {
 		//BufferedImage fromRobot = getFromRobot(x,y,width,height);
 		//BufferedImage compressed = compress(getFromRobot(x,y,width,height));
-		return compress(getFromRobot(x,y,width,height));
+		//return compress(getFromRobot(x,y,width,height));
+		return getFromRobot(x, y, width, height);
 	}
 	
 	private BufferedImage getFromRobot(int x,int y,int width,int height) {
