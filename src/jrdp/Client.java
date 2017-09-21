@@ -1,15 +1,12 @@
 package jrdp;
 
 import java.net.*;
-import java.util.Date;
-import java.awt.Image;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import javax.swing.*;
 
@@ -63,7 +60,7 @@ public class Client extends JFrame {
 		}catch(Exception ex) {ex.printStackTrace();}
 		System.out.println("Info: Starting Listener thread");
 		new ListenFromServer(socket,sInput,sOutput).start();
-		new SendInput(socket, sInput, sOutput).start();
+		//new SendInput(socket, sInput, sOutput).start();
 	}
 	
 	public void revailidateFrame() {
@@ -80,23 +77,20 @@ public class Client extends JFrame {
 		}
 		
 		public void run() {
-			int mi = 0;
-			while(true) {
+			//while(true) {
 				try {
-					String time = sInput.readUTF();
-					System.out.println(time);
-					System.out.println(mi + " GETT@: " + (new Date().getTime()));
-					byte[] toConvertBytes = (byte[])sInput.readObject();
-					BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
-					Image newImage = new ImageIcon(screenshot).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH);
-					label.setIcon(new ImageIcon(newImage));
-					System.out.println(mi + " GETT@: " + (new Date().getTime()));
-					mi++;
+					//byte[] toConvertBytes = (byte[])sInput.readObject();
+					//BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
+					//Image newImage = new ImageIcon(new NetworkHandler().bytesToImage((byte[])sInput.readObject())).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH);
+					label.setIcon(new ImageIcon(new ImageIcon(new NetworkHandler().bytesToImage((byte[])sInput.
+							readObject())).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH)));
+					sOutput.writeUTF("MEH");
+					sOutput.flush();
 					//revailidateFrame();
 					//ImageIcon aimage = new ImageIcon(newImage);
 					//add(aimage);// may fail
 				}catch(Exception ex) {/*nothing*/}
-			}
+			//}
 		}
 	}
 	

@@ -28,9 +28,9 @@ public class ImageHandler {
 	}
 	
 	public BufferedImage getScreenshot(int x, int y, int width, int height) {
-		BufferedImage fromRobot = getFromRobot(x,y,width,height);
-		BufferedImage compressed = compress(fromRobot);
-		return compressed;
+		//BufferedImage fromRobot = getFromRobot(x,y,width,height);
+		//BufferedImage compressed = compress(getFromRobot(x,y,width,height));
+		return compress(getFromRobot(x,y,width,height));
 	}
 	
 	private BufferedImage getFromRobot(int x,int y,int width,int height) {
@@ -43,24 +43,24 @@ public class ImageHandler {
 		}else {
 			rect = new Rectangle(x, y, width, height);
 		}
-		BufferedImage robotImage = robot.createScreenCapture(rect);
-		return robotImage;
+		//BufferedImage robotImage = robot.createScreenCapture(rect);
+		return robot.createScreenCapture(rect);
 	}
 	
 	private BufferedImage compress(BufferedImage compressThis) {
 		BufferedImage returnThis = null;
 		try {
-		ByteArrayOutputStream compressed = new ByteArrayOutputStream();
-		ImageOutputStream outputStream = ImageIO.createImageOutputStream(compressed);
-		ImageWriter jpgWriter = ImageIO.getImageWritersByFormatName("jpg").next();
-		ImageWriteParam jpgWriteParam = jpgWriter.getDefaultWriteParam();
-		jpgWriteParam.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-		jpgWriteParam.setCompressionQuality((float)compression);
-		jpgWriter.setOutput(outputStream);
-		jpgWriter.write(null, new IIOImage(compressThis, null, null), jpgWriteParam);
-		jpgWriter.dispose();
-		ByteArrayInputStream bais = new ByteArrayInputStream(compressed.toByteArray());
-		returnThis = ImageIO.read(bais);
+			ByteArrayOutputStream compressed = new ByteArrayOutputStream();
+			ImageOutputStream outputStream = ImageIO.createImageOutputStream(compressed);
+			ImageWriter jpgWriter = ImageIO.getImageWritersByFormatName("jpg").next();
+			ImageWriteParam jpgWriteParam = jpgWriter.getDefaultWriteParam();
+			jpgWriteParam.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
+			jpgWriteParam.setCompressionQuality((float)compression);
+			jpgWriter.setOutput(outputStream);
+			jpgWriter.write(null, new IIOImage(compressThis, null, null), jpgWriteParam);
+			jpgWriter.dispose();
+			ByteArrayInputStream bais = new ByteArrayInputStream(compressed.toByteArray());
+			returnThis = ImageIO.read(bais);
 		}catch(Exception ex) {}
 		return returnThis;
 	}

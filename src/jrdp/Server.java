@@ -1,7 +1,6 @@
 package jrdp;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -72,27 +71,27 @@ public class Server {
 			System.out.println("Info: Running imageThread");
 			Thread imageThread = new Thread() {
 				public void run() {
-					ImageHandler ih = new ImageHandler(compression,socket);
-					int mi = 0;
-					while(true) {
-						BufferedImage screenshot = ih.getScreenshot(-1,-1,-1,-1);
+					//ImageHandler ih = new ImageHandler(compression,socket);
+					//while(true) {
+						//BufferedImage screenshot = ih.getScreenshot(-1,-1,-1,-1);
 						//eventually the client will decide what the parameters are for zooming and stuff. for now just use -1-1-1-1
 						try{
-							String time = mi + " SENT@: " + new Date().getTime();
-							sOutput.writeUTF(time);
-							sOutput.writeObject(new NetworkHandler().imageToBytes(screenshot)); //originally writeObject(screenshot);
+							long time1 = new Date().getTime();
+							sOutput.writeObject(new NetworkHandler().imageToBytes(new ImageHandler(compression,socket).getScreenshot(-1,-1,-1,-1))); //originally writeObject(screenshot);
 							sOutput.flush();
-						}catch(Exception ex) {}
-						System.out.println(mi + " SENT@: " + new Date().getTime());
-						mi++;
-					}
+							String meh = sInput.readUTF();
+							long time2 = new Date().getTime();
+							long dif = time2 - time1;
+							System.out.println("Time 1: " + time1 + "\nTime 2: "+time2+"\nDiff: "+dif);
+						}catch(Exception ex) {System.out.println("WARN: Socket has been closed by Client!");/*break;*/}
+					//}
 				}
 			};
 			imageThread.start();
 			System.out.println("Info: ImageThread started");
 			InputHandler inh = new InputHandler();
 			System.out.println("Info: Starting Input loop");
-			while(true) {
+			/*while(true) {
 				try {
 					String input = (String)sInput.readObject();
 					//data format (separated by ":") (keystrokes are separated by "~")
@@ -109,8 +108,7 @@ public class Server {
 					int mClick = Integer.parseInt(data[8]);
 					inh.handle(keyStrokes,mXi,mYi,mSi,mClick);
 				}catch(Exception ex) {}
-			}
+			}*/
 		}
-	}
-	
+	}	
 }
