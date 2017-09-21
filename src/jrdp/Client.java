@@ -1,6 +1,7 @@
 package jrdp;
 
 import java.net.*;
+import java.util.zip.GZIPInputStream;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -71,9 +72,14 @@ public class Client extends JFrame {
 		Socket socket;
 		ObjectInputStream sInput;
 		ObjectOutputStream sOutput;
+		GZIPInputStream gInput;
 		
 		ListenFromServer(Socket thesocket,ObjectInputStream thesInput,ObjectOutputStream thesOutput){
-			socket = thesocket;sInput = thesInput;sOutput = thesOutput;
+			try {
+				socket = thesocket;
+				sInput = new ObjectInputStream(new GZIPInputStream(thesocket.getInputStream()));
+				sOutput = thesOutput;
+			}catch(Exception ex) {}
 		}
 		
 		public void run() {
@@ -86,9 +92,6 @@ public class Client extends JFrame {
 							readObject())).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH)));
 					sOutput.writeUTF("MEH");
 					sOutput.flush();
-					//revailidateFrame();
-					//ImageIcon aimage = new ImageIcon(newImage);
-					//add(aimage);// may fail
 				}catch(Exception ex) {System.out.println("WARN: Socket closed by Server!");break;}
 			}
 		}

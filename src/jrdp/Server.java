@@ -6,6 +6,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.*;
 import java.util.Date;
+import java.util.zip.GZIPOutputStream;
 
 public class Server {
 	private int port;
@@ -34,6 +35,7 @@ public class Server {
 		Socket socket;
 		ObjectInputStream sInput;
 		ObjectOutputStream sOutput;
+		GZIPOutputStream gOutput;
 		double compression = 0.50;
 		
 		int windowStartX=0;
@@ -46,6 +48,7 @@ public class Server {
 			try {
 				sOutput = new ObjectOutputStream(socket.getOutputStream());
 				sInput  = new ObjectInputStream(socket.getInputStream());
+				gOutput = new GZIPOutputStream(socket.getOutputStream());
 				String testPassword = (String) sInput.readObject();
 				if(!testPassword.equals(password)) {
 					socket.close();
@@ -77,12 +80,14 @@ public class Server {
 						//eventually the client will decide what the parameters are for zooming and stuff. for now just use -1-1-1-1
 						try{
 							long time1 = new Date().getTime();
-							sOutput.writeObject(new NetworkHandler().imageToBytes(new ImageHandler(compression,socket).getScreenshot(-1,-1,-1,-1))); //originally writeObject(screenshot);
+							gOutput.write(new NetworkHandler().imageToBytes(new ImageHandler(compression,socket).getScreenshot(-1,-1,-1,-1))); //originally writeObject(screenshot);
+							//sOutput.writeObject(new NetworkHandler().imageToBytes(new ImageHandler(compression,socket).getScreenshot(-1,-1,-1,-1))); //originally writeObject(screenshot);
 							long time2 = new Date().getTime();
 							long dif = time2 - time1;
 							System.out.println("Time 1: " + time1 + "\nTime 2: "+time2+"\nDiff: "+dif);
-							sOutput.flush();
+							gOutput.flush();
 							String meh = sInput.readUTF();
+							meh = meh + " ";
 							
 						}catch(Exception ex) {System.out.println("WARN: Socket has been closed by Client!");/*break;*/}
 					}

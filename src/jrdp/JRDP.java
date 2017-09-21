@@ -1,13 +1,21 @@
+/**********************************************************
+ * 
+ * 					  JavaRDP
+ *       	  A Java based RDP Client 
+ *              
+ * 			 Written by Joshua C. Moore
+ * 
+ **********************************************************/
+
+
+
 package jrdp;
 import javax.swing.JFrame;
-
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.ThreadLocalRandom;
-
 import javax.swing.*;
 
 public class JRDP extends JFrame {
@@ -15,32 +23,30 @@ public class JRDP extends JFrame {
 	 * @author Joshua C Moore
 	 */private static final long serialVersionUID = 1L;
 	
-	private JTextField hostPasswordTF,hostPortTF,clientAddressTF,clientPortTF,clientPasswordTF,clientCompressionTF;
-	private JLabel hostPasswordLBL,hostPortLBL,clientAddressLBL,clientPortLBL,clientPasswordLBL,clientCompressionLBL;
-	private JButton serverB,connectB;
+	private JTextField hostPasswordTF, hostPortTF, clientAddressTF, clientPortTF, clientPasswordTF, clientCompressionTF;
+	private JLabel hostPasswordLBL, hostPortLBL, clientAddressLBL, clientPortLBL, clientPasswordLBL, clientCompressionLBL;
+	private JButton serverB, connectB;
 	
 	private JRDP() {
 		super("Java Remote Desktop Protocol Viewer");
 		setLayout(new GridBagLayout());
-		GridBagConstraints gbc=new GridBagConstraints();
-		//gbc.weightx=0.1;
-		//gbc.weighty=0.1;
+		GridBagConstraints gbc = new GridBagConstraints();
 		
-		int tmpPassword = ThreadLocalRandom.current().nextInt(10000000,99999999);
+		int tmpPassword = ThreadLocalRandom.current().nextInt(10000000, 99999999);
 		
 		JLabel hostLabel = new JLabel("Host Setup\n");
-		gbc.gridx=0;gbc.gridy=0;add(hostLabel,gbc);
+		gbc.gridx = 0; gbc.gridy = 0; add(hostLabel, gbc);
 		
 		hostPasswordLBL = new JLabel("Set a password: ");
 		hostPasswordTF = new JTextField(Integer.toString(tmpPassword));
-		gbc.gridx = 0;gbc.gridy = 1;add(hostPasswordLBL,gbc);gbc.gridx = 1;add(hostPasswordTF,gbc);
+		gbc.gridx = 0;gbc.gridy = 1; add(hostPasswordLBL, gbc); gbc.gridx = 1; add(hostPasswordTF, gbc);
 		
 		hostPortLBL = new JLabel("Set a port: ");
 		hostPortTF = new JTextField("65432");
-		gbc.gridx=0;gbc.gridy=2;add(hostPortLBL,gbc);gbc.gridx=1;add(hostPortTF,gbc);
+		gbc.gridx = 0; gbc.gridy = 2; add(hostPortLBL, gbc); gbc.gridx = 1; add(hostPortTF, gbc);
 		
 		serverB = new JButton("Start Server");
-		gbc.gridx=0;gbc.gridy=3;add(serverB,gbc);
+		gbc.gridx = 0; gbc.gridy = 3; add(serverB, gbc);
 		
 		//address port password compression
 		clientAddressLBL = new JLabel("Address of Server: ");
