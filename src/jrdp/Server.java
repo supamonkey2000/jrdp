@@ -72,7 +72,7 @@ public class Server {
 			Thread imageThread = new Thread() {
 				public void run() {
 					//ImageHandler ih = new ImageHandler(compression,socket);
-					//while(true) {
+					while(true) {
 						//BufferedImage screenshot = ih.getScreenshot(-1,-1,-1,-1);
 						//eventually the client will decide what the parameters are for zooming and stuff. for now just use -1-1-1-1
 						try{
@@ -84,7 +84,7 @@ public class Server {
 							long dif = time2 - time1;
 							System.out.println("Time 1: " + time1 + "\nTime 2: "+time2+"\nDiff: "+dif);
 						}catch(Exception ex) {System.out.println("WARN: Socket has been closed by Client!");/*break;*/}
-					//}
+					}
 				}
 			};
 			imageThread.start();

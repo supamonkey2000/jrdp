@@ -77,7 +77,7 @@ public class Client extends JFrame {
 		}
 		
 		public void run() {
-			//while(true) {
+			while(true) {
 				try {
 					//byte[] toConvertBytes = (byte[])sInput.readObject();
 					//BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
@@ -89,8 +89,8 @@ public class Client extends JFrame {
 					//revailidateFrame();
 					//ImageIcon aimage = new ImageIcon(newImage);
 					//add(aimage);// may fail
-				}catch(Exception ex) {/*nothing*/}
-			//}
+				}catch(Exception ex) {System.out.println("WARN: Socket closed by Server!");break;}
+			}
 		}
 	}
 	
