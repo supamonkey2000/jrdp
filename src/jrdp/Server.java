@@ -1,6 +1,7 @@
 package jrdp;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -8,53 +9,49 @@ import java.net.*;
 import java.util.Date;
 import java.util.zip.GZIPOutputStream;
 
-public class Server {
+class Server {
 	private int port;
 	private String password;
+
+	private DatagramSocket socket = null;
+	private DatagramPacket packet = null;
+	private byte[] buf = new byte[1000];
+	//private InetAddress address;
 	
-	private ServerSocket serverSocket = null;
-	
-	public Server(int thePort,String thePassword) {
+	Server(int thePort,String thePassword) {
 		port = thePort;
 		password = thePassword;
 	}
 	
-	public void start() {
+	void start() {
 		try {
 			System.out.println("Info: Starting server");
-			serverSocket = new ServerSocket(port);
-			Socket socket = serverSocket.accept();
-			ClientThread cl = new ClientThread(socket);
-			System.out.println("Info: Running ClientThread.start()");
-			cl.start();
-			System.out.println("Info: Started without errors");
-		}catch(IOException ex) {ex.printStackTrace();}
+			socket = new DatagramSocket(port);
+			packet = new DatagramPacket(buf, buf.length);
+			socket.receive(packet);
+			String password = new String(packet.getData(), 0, packet.getLength());
+			if(password.equals(this.password)) {
+				ClientThread cl = new ClientThread(socket.getInetAddress());
+				System.out.println("Info: Running ClientThread.start()");
+				cl.start();
+				System.out.println("Info: Started without errors");
+			}
+		} catch(IOException ex) {
+			ex.printStackTrace();
+		}
 	}
 	
 	class ClientThread extends Thread {
-		Socket socket;
-		ObjectInputStream sInput;
-		ObjectOutputStream sOutput;
-		GZIPOutputStream gOutput;
 		double compression = 0.50;
+		InetAddress address;
 		
-		int windowStartX=0;
-		int windowStartY=0;
-		int windowEndX=0;
-		int windowEndY=0;
-		
-		ClientThread(Socket theSocket){
-			socket = theSocket;
+		ClientThread(InetAddress address) {
+			this.address = address;
 			try {
-				sOutput = new ObjectOutputStream(socket.getOutputStream());
-				sInput  = new ObjectInputStream(socket.getInputStream());
-				gOutput = new GZIPOutputStream(socket.getOutputStream());
-				String testPassword = (String) sInput.readObject();
-				if(!testPassword.equals(password)) {
-					socket.close();
-				}
-				System.out.println("Info: Connection accepted at "+socket.getRemoteSocketAddress());
-				double tmpCompression = (double) sInput.readDouble();
+				System.out.println("Info: Connection accepted at " + address.getHostAddress());
+				socket.receive(packet);
+				String compString = new String(packet.getData(), 0, packet.getLength());
+				double tmpCompression = Double.parseDouble(compString);
 				System.out.println("Info: Compression from client = " + tmpCompression);
 				if(tmpCompression > 0.00 && tmpCompression <=1.00) {
 					compression = tmpCompression;
@@ -68,9 +65,9 @@ public class Server {
 			int serverWidth = gd.getDisplayMode().getWidth();
 			int serverHeight = gd.getDisplayMode().getHeight();
 			try {
-				sOutput.writeObject(serverWidth+"x"+serverHeight);
-				sOutput.flush();
-			}catch(Exception ex){}
+				buf = (serverWidth + "x" + serverHeight).getBytes();
+				socket.send(new DatagramPacket(buf, buf.length, address, port));
+			}catch(Exception ex){/**/}
 			System.out.println("Info: Running imageThread");
 			Thread imageThread = new Thread() {
 				public void run() {
@@ -80,16 +77,17 @@ public class Server {
 						//eventually the client will decide what the parameters are for zooming and stuff. for now just use -1-1-1-1
 						try{
 							long time1 = new Date().getTime();
-							gOutput.write(new NetworkHandler().imageToBytes(new ImageHandler(compression,socket).getScreenshot(-1,-1,-1,-1))); //originally writeObject(screenshot);
+							//gOutput.write(new NetworkHandler().imageToBytes(new ImageHandler(compression,socket).getScreenshot(-1,-1,-1,-1))); //originally writeObject(screenshot);
 							//sOutput.writeObject(new NetworkHandler().imageToBytes(new ImageHandler(compression,socket).getScreenshot(-1,-1,-1,-1))); //originally writeObject(screenshot);
 							long time2 = new Date().getTime();
 							long dif = time2 - time1;
 							System.out.println("Time 1: " + time1 + "\nTime 2: "+time2+"\nDiff: "+dif);
-							gOutput.flush();
-							String meh = sInput.readUTF();
-							meh = meh + " ";
-							
-						}catch(Exception ex) {System.out.println("WARN: Socket has been closed by Client!");/*break;*/}
+							buf = new NetworkHandler().imageToBytes(new ImageHandler(compression,socket).getScreenshot(-1,-1,-1,-1));
+							socket.send(new DatagramPacket(buf, buf.length, address, port));
+						} catch(Exception ex) {
+							System.out.println("WARN: Socket has been closed by Client!");
+							break;
+						}
 					}
 				}
 			};

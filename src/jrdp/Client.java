@@ -12,46 +12,49 @@ import java.io.*;
 import javax.swing.*;
 
 public class Client extends JFrame {
-	/**
-	 * @author Joshua C Moore
-	 */private static final long serialVersionUID = 1L;
 	
-	private String address,password;
+	private String password;
 	private int port;
 	private double compression;
-	public double height,width,serverHeight,serverWidth;
-	public double scaleRatio;
+	private double height,width,serverHeight,serverWidth;
+	private double scaleRatio;
 	
-	private Socket socket;
-	private ObjectInputStream sInput;
-	private ObjectOutputStream sOutput;
-	public JLabel label;
+	private DatagramSocket socket;
+	private DatagramPacket packet;
+	private byte[] buf = new byte[1000];
+	private JLabel label;
+	private InetAddress address;
 	
-	public Client(String theAddress,int thePort,String thePassword,double theCompression) {
-		address = theAddress;
-		port = thePort;
-		password = thePassword;
-		compression = theCompression;
-		
-		label = new JLabel(new ImageIcon());
-		add(label);
-		
-		setExtendedState(JFrame.MAXIMIZED_BOTH);
-		setUndecorated(true);
-		setVisible(true);
-		height = getHeight();
-		width = getWidth();
+	Client(String address,int thePort,String thePassword,double theCompression) {
+		try {
+			this.address = InetAddress.getByName(address);
+			port = thePort;
+			password = thePassword;
+			compression = theCompression;
+
+			label = new JLabel(new ImageIcon());
+			add(label);
+
+			setExtendedState(JFrame.MAXIMIZED_BOTH);
+			setUndecorated(true);
+			setVisible(true);
+			height = getHeight();
+			width = getWidth();
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 	
-	public void connect() {
+	void connect() {
 		try {
-			socket = new Socket(address, port);
-			sInput  = new ObjectInputStream(socket.getInputStream());
-			sOutput = new ObjectOutputStream(socket.getOutputStream());
-			sOutput.writeObject(password);
-			sOutput.writeDouble(compression);
-			sOutput.flush();
-			String serverXY = (String)sInput.readObject();
+			socket = new DatagramSocket(port);
+			socket.connect(address, port);
+			buf = password.getBytes();
+			socket.send(new DatagramPacket(buf, buf.length));
+			buf = Double.toString(compression).getBytes();
+			socket.send(new DatagramPacket(buf, buf.length));
+			socket.receive(packet);
+			String serverXY = new String(packet.getData(), 0, packet.getLength());
 			String[] serverXYarray = serverXY.split("x");
 			serverWidth=Integer.parseInt(serverXYarray[0]);
 			serverHeight=Integer.parseInt(serverXYarray[1]);

@@ -14,20 +14,20 @@ import javax.imageio.ImageWriteParam;
 import javax.imageio.ImageWriter;
 import javax.imageio.stream.ImageOutputStream;
 
-public class ImageHandler {
-	double compression;
-	Socket socket;
-	Robot robot;
+class ImageHandler {
+	private double compression;
+	private DatagramSocket socket;
+	private Robot robot;
 	
-	public ImageHandler(double theCompression, Socket theSocket) {
-		socket = theSocket;
-		compression = theCompression;
+	ImageHandler(double compression, DatagramSocket socket) {
+		this.socket = socket;
+		this.compression = compression;
 		try {
 			robot = new Robot();
 		}catch(Exception ex) {ex.printStackTrace();}
 	}
 	
-	public BufferedImage getScreenshot(int x, int y, int width, int height) {
+	BufferedImage getScreenshot(int x, int y, int width, int height) {
 		//BufferedImage fromRobot = getFromRobot(x,y,width,height);
 		//BufferedImage compressed = compress(getFromRobot(x,y,width,height));
 		return compress(getFromRobot(x,y,width,height));
