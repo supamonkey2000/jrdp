@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="JavaRDP:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5df77292-c805-4aa2-a67b-263734eebe7e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jrdp/Client.java" afterPath="$PROJECT_DIR$/src/jrdp/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client$ListenFromServer.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client$ListenFromServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$1.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$2.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$3.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client$SendInput.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client$SendInput.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/ImageHandler.class" afterPath="$PROJECT_DIR$/bin/jrdp/ImageHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/InputHandler$1.class" afterPath="$PROJECT_DIR$/bin/jrdp/InputHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/InputHandler.class" afterPath="$PROJECT_DIR$/bin/jrdp/InputHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/JRDP$1.class" afterPath="$PROJECT_DIR$/bin/jrdp/JRDP$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/JRDP$2.class" afterPath="$PROJECT_DIR$/bin/jrdp/JRDP$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/JRDP.class" afterPath="$PROJECT_DIR$/bin/jrdp/JRDP.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/NetworkHandler.class" afterPath="$PROJECT_DIR$/bin/jrdp/NetworkHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Server$ClientThread$1.class" afterPath="$PROJECT_DIR$/bin/jrdp/Server$ClientThread$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Server$ClientThread.class" afterPath="$PROJECT_DIR$/bin/jrdp/Server$ClientThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Server.class" afterPath="$PROJECT_DIR$/bin/jrdp/Server.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,9 +61,11 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jrdp/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1520">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="700">
+              <caret line="113" column="21" lean-forward="false" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,7 +181,7 @@
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.project" />
@@ -280,6 +303,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -358,15 +382,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jrdp/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1520">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="700">
+          <caret line="113" column="21" lean-forward="false" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>JavaRDP:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
@@ -380,7 +432,19 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>9.0</last-edited>
+          <last-edited>1.8 (1)</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JavaRDP</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
