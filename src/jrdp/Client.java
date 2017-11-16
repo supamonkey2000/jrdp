@@ -1,7 +1,6 @@
 package jrdp;
 
 import java.net.*;
-import java.util.zip.GZIPInputStream;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -11,7 +10,7 @@ import java.awt.event.MouseMotionListener;
 import java.io.*;
 import javax.swing.*;
 
-public class Client extends JFrame {
+class Client extends JFrame {
 	
 	private String password;
 	private int port;
@@ -63,27 +62,11 @@ public class Client extends JFrame {
 			System.out.println("Info: Client connected to server at "+socket.getRemoteSocketAddress()+" with screen size "+serverWidth+"x"+serverHeight);
 		}catch(Exception ex) {ex.printStackTrace();}
 		System.out.println("Info: Starting Listener thread");
-		new ListenFromServer(socket,sInput,sOutput).start();
+		new ListenFromServer().start();
 		//new SendInput(socket, sInput, sOutput).start();
 	}
 	
-	public void revailidateFrame() {
-		revalidate();
-	}
-	
 	class ListenFromServer extends Thread {
-		Socket socket;
-		ObjectInputStream sInput;
-		ObjectOutputStream sOutput;
-		GZIPInputStream gInput;
-		
-		ListenFromServer(Socket thesocket,ObjectInputStream thesInput,ObjectOutputStream thesOutput){
-			try {
-				socket = thesocket;
-				sInput = new ObjectInputStream(new GZIPInputStream(thesocket.getInputStream()));
-				sOutput = thesOutput;
-			}catch(Exception ex) {}
-		}
 		
 		public void run() {
 			while(true) {
@@ -91,10 +74,8 @@ public class Client extends JFrame {
 					//byte[] toConvertBytes = (byte[])sInput.readObject();
 					//BufferedImage screenshot = new NetworkHandler().bytesToImage(toConvertBytes);
 					//Image newImage = new ImageIcon(new NetworkHandler().bytesToImage((byte[])sInput.readObject())).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH);
-					label.setIcon(new ImageIcon(new ImageIcon(new NetworkHandler().bytesToImage((byte[])sInput.
-							readObject())).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH)));
-					sOutput.writeUTF("MEH");
-					sOutput.flush();
+					socket.receive(packet);
+					label.setIcon(new ImageIcon(new ImageIcon(new NetworkHandler().bytesToImage(packet.getData())).getImage().getScaledInstance((int)width, (int)height, java.awt.Image.SCALE_SMOOTH)));
 				}catch(Exception ex) {System.out.println("WARN: Socket closed by Server!");break;}
 			}
 		}
@@ -107,7 +88,12 @@ public class Client extends JFrame {
 		ObjectOutputStream sOutput;
 		
 		SendInput(Socket thesocket,ObjectInputStream thesInput,ObjectOutputStream thesOutput){
-			socket = thesocket;sInput = thesInput;sOutput = thesOutput;try{robot = new Robot();}catch(Exception e){}
+			socket = thesocket;sInput = thesInput;sOutput = thesOutput;
+			try {
+				robot = new Robot();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 		public void run() {
@@ -123,7 +109,9 @@ public class Client extends JFrame {
 						sOutput.writeObject(send);
 						sOutput.flush();
 						System.out.println("Info: Sent a key!");
-					}catch(Exception ex) {}
+					} catch(Exception ex) {
+						ex.printStackTrace();
+					}
 				}
 			});
 			addMouseListener(new MouseListener() {
@@ -135,7 +123,9 @@ public class Client extends JFrame {
 						sOutput.writeObject(send);
 						sOutput.flush();
 						System.out.println("Info: Sent a mouse click!");
-					}catch(Exception ex) {}
+					} catch(Exception ex) {
+						ex.printStackTrace();
+					}
 				}
 
 				@Override
@@ -162,7 +152,9 @@ public class Client extends JFrame {
 					try {
 						sOutput.writeObject(send);
 						sOutput.flush();
-					}catch(Exception ex) {}
+					} catch(Exception ex) {
+						ex.printStackTrace();
+					}
 				}
 				@Override
 				public void mouseDragged(MouseEvent e) {
@@ -174,7 +166,9 @@ public class Client extends JFrame {
 					try {
 						sOutput.writeObject(send);
 						sOutput.flush();
-					}catch(Exception ex) {}
+					} catch(Exception ex) {
+						ex.printStackTrace();
+					}
 				}
 			});
 		}

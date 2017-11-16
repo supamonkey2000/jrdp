@@ -2,199 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5df77292-c805-4aa2-a67b-263734eebe7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaRDP.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0-setup.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0.jpn" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0.jprof" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0.prj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0.startup" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0.usg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0.xbind.script" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_jetpdb/JRDP-0.1.0.efs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_jetpdb/JRDP-0.1.0.env" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_jetpdb/JRDP-0.1.0.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_jetpdb/irb.pdb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_jetpdb/irei.pdb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_jetpdb/obj.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_jetpdb/reorder.li" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_jetpdb/sym.pdb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_jetpdb/tmpres/JRDP-0.1.0__0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/Builds/JRDP-0.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/JRDP-0.1.0.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/JAWTAccessBridge-64.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/JavaAccessBridge-64.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/WindowsAccessBridge-64.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/awt.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/cleanup.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/dcpr.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/decora_sse.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/fontmanager.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/fxplugins.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/glass.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/glib-lite.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/gstreamer-lite.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/j2pcsc.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/j2pkcs11.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/jaas_nt.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/jabswitch.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/java.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/javafx_font.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/javafx_iio.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/jawt.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/jetvm/jvm.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/jfxmedia.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/jfxwebkit.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/jli.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/jpeg.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/jsound.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/jsoundds.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/kcms.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/keytool.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/kinit.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/klist.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/ktab.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/lcms.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/mlib_image.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/msvcp120.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/msvcr100.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/msvcr120.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/net.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/nio.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/orbd.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/pack200.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/policytool.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/prism_common.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/prism_d3d.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/prism_es2.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/prism_sw.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/rmid.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/rmiregistry.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/servertool.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/sunec.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/sunmscapi.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/t2k.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/tnameserv.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/unpack.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/unpack200.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/w2k_lsa_auth.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/bin/zip.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XAWT12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XCLD12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XCP212008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XCP312008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XCRB12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XDNS12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XEND12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XFXB12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XFXW12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XJCE12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XJFX12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XJXB12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XKRN12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XL5512008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XL5612008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLCH12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLDB12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLEC12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLEI12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLEJ12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLEK12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLEL12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLEM12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLET12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLEU12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLHI12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLIN12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLJA12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLKO12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLML12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLOT12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLTH12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLVI12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLX212008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XLXT12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XMIA12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XMIS12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XSCR12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XXBL12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XXWS12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/XZFS12008121.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/dynlookup12008121.tbl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/jc.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/unpack2001200.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/jetrt/unpacklzma1200.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/amd64/jvm.cfg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/calendars.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/charsets.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/cmm/CIEXYZ.pf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/cmm/GRAY.pf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/cmm/LINEAR_RGB.pf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/cmm/PYCC.pf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/cmm/sRGB.pf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/content-types.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/currency.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/access-bridge-64.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/cldrdata.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/dnsns.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/jaccess.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/jfxrt.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/meta-index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/nashorn.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/sunec.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/sunjce_provider.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/sunmscapi.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/sunpkcs11.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/ext/zipfs.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/flavormap.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/fontconfig.bfc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/fontconfig.properties.src" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/fonts/LucidaSansRegular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/hijrah-config-umalqura.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/images/cursors/cursors.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/images/cursors/invalid32x32.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/images/cursors/win32_CopyDrop32x32.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/images/cursors/win32_CopyNoDrop32x32.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/images/cursors/win32_LinkDrop32x32.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/images/cursors/win32_LinkNoDrop32x32.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/images/cursors/win32_MoveDrop32x32.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/images/cursors/win32_MoveNoDrop32x32.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/javafx.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/jce.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/jfxswt.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/locales" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/logging.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/management/jmxremote.access" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/management/jmxremote.password.template" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/management/management.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/management/snmp.acl.template" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/meta-index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/net.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/psfont.properties.ja" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/psfontj2d.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/resources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/security/US_export_policy.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/security/blacklist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/security/blacklisted.certs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/security/cacerts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/security/java.policy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/security/java.security" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/security/local_policy.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/security/trusted.libraries" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/sound.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/tzdb.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/Root/rt/lib/tzmappings" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/xbind.redirection" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/JRDP-0.1.0_trial_run/xbind.script" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/build_JRDP-0.1.0.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jrdp/run_JRDP-0.1.0.bat" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jrdp/Client.java" afterPath="$PROJECT_DIR$/src/jrdp/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jrdp/ImageHandler.java" afterPath="$PROJECT_DIR$/src/jrdp/ImageHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jrdp/Server.java" afterPath="$PROJECT_DIR$/src/jrdp/Server.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -232,12 +40,9 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jrdp/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="50" column="42" lean-forward="false" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
-              <folding>
-                <element signature="e#2147#2148#0" expanded="true" />
-                <element signature="e#2166#2167#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1520">
+              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -553,12 +358,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jrdp/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="50" column="42" lean-forward="false" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
-          <folding>
-            <element signature="e#2147#2148#0" expanded="true" />
-            <element signature="e#2166#2167#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1520">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
