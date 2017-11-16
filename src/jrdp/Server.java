@@ -28,7 +28,9 @@ class Server {
 			System.out.println("Info: Starting server");
 			socket = new DatagramSocket(port);
 			packet = new DatagramPacket(buf, buf.length);
+			System.out.println("Created stuff");
 			socket.receive(packet);
+			System.out.println("Received");
 			String password = new String(packet.getData(), 0, packet.getLength());
 			if(password.equals(this.password)) {
 				ClientThread cl = new ClientThread(socket.getInetAddress());

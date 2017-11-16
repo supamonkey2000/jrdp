@@ -47,13 +47,18 @@ class Client extends JFrame {
 	void connect() {
 		try {
 			socket = new DatagramSocket(port);
+			packet = new DatagramPacket(buf, buf.length);
+			System.out.println("Created");
 			socket.connect(address, port);
+			System.out.println("Connected");
 			buf = password.getBytes();
 			socket.send(new DatagramPacket(buf, buf.length));
 			buf = Double.toString(compression).getBytes();
 			socket.send(new DatagramPacket(buf, buf.length));
+			System.out.println("Sent password and compression");
 			socket.receive(packet);
 			String serverXY = new String(packet.getData(), 0, packet.getLength());
+			System.out.println("Received size");
 			String[] serverXYarray = serverXY.split("x");
 			serverWidth=Integer.parseInt(serverXYarray[0]);
 			serverHeight=Integer.parseInt(serverXYarray[1]);

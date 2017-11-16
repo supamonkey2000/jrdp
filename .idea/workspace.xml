@@ -7,23 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5df77292-c805-4aa2-a67b-263734eebe7e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client$ListenFromServer.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client$ListenFromServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$1.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$2.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$3.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client$SendInput$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client$SendInput.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client$SendInput.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Client.class" afterPath="$PROJECT_DIR$/bin/jrdp/Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/ImageHandler.class" afterPath="$PROJECT_DIR$/bin/jrdp/ImageHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/InputHandler$1.class" afterPath="$PROJECT_DIR$/bin/jrdp/InputHandler$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/InputHandler.class" afterPath="$PROJECT_DIR$/bin/jrdp/InputHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/JRDP$1.class" afterPath="$PROJECT_DIR$/bin/jrdp/JRDP$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/JRDP$2.class" afterPath="$PROJECT_DIR$/bin/jrdp/JRDP$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/JRDP.class" afterPath="$PROJECT_DIR$/bin/jrdp/JRDP.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/NetworkHandler.class" afterPath="$PROJECT_DIR$/bin/jrdp/NetworkHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Server$ClientThread$1.class" afterPath="$PROJECT_DIR$/bin/jrdp/Server$ClientThread$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Server$ClientThread.class" afterPath="$PROJECT_DIR$/bin/jrdp/Server$ClientThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jrdp/Server.class" afterPath="$PROJECT_DIR$/bin/jrdp/Server.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jrdp/Client.java" afterPath="$PROJECT_DIR$/src/jrdp/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jrdp/Server.java" afterPath="$PROJECT_DIR$/src/jrdp/Server.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,24 +32,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jrdp/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+            <state relative-caret-position="200">
+              <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
               <folding>
-                <element signature="e#2349#3516#0" expanded="true" />
-                <element signature="e#3515#3516#0" expanded="true" />
+                <element signature="e#2424#3591#0" expanded="true" />
+                <element signature="e#3590#3591#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jrdp/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="113" column="21" lean-forward="false" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+            <state relative-caret-position="360">
+              <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,14 +109,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/jrdp/ImageHandler.java" />
-        <option value="$PROJECT_DIR$/src/jrdp/Server.java" />
         <option value="$PROJECT_DIR$/src/jrdp/Client.java" />
+        <option value="$PROJECT_DIR$/src/jrdp/Server.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="611" />
-    <option name="width" value="1316" />
+    <option name="x" value="577" />
+    <option name="width" value="1350" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -198,7 +185,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.test">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -280,6 +267,20 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="test" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="jrdp.JRDP" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaRDP" />
+      <envs />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -298,7 +299,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="611" y="0" width="1316" height="1047" extended-state="0" />
+    <frame x="577" y="0" width="1350" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -309,12 +310,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1544586" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1503876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -369,23 +370,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jrdp/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/jrdp/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+        <state relative-caret-position="360">
+          <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
           <folding>
-            <element signature="e#2349#3516#0" expanded="true" />
-            <element signature="e#3515#3516#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jrdp/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/jrdp/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="113" column="21" lean-forward="false" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+        <state relative-caret-position="200">
+          <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2424#3591#0" expanded="true" />
+            <element signature="e#3590#3591#0" expanded="true" />
           </folding>
         </state>
       </provider>
